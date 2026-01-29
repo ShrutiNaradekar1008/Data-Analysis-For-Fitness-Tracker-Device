@@ -44,18 +44,18 @@ An interactive dashboard was created to visualize key insights such as:
 Dashboard screenshots are available in `tableau/` folder.  
 Tableau Public Link: **[paste your Tableau link here]**
 
-## 💡 Key Insights
+## Key Insights
 - Insight 1: **[example: Sales peak during Q4 months]**
 - Insight 2: **[example: Category A contributes highest revenue]**
 - Insight 3: **[example: Customer retention is lower in region X]**
 
-## 🛠 Tools Used
+## Tools Used
 - Excel  
 - SQL (Google BigQuery)  
 - R  
 - Tableau  
 
-## 📌 How to Reproduce This Analysis
+## How to Reproduce This Analysis
 1. Download dataset from Kaggle
 2. Perform cleaning steps as described above
 3. Upload cleaned data to BigQuery and run SQL scripts from `sql/`
