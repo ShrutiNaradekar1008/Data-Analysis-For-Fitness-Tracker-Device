@@ -1,42 +1,32 @@
-# 📊 End-to-End Data Analysis Project
+# End-to-End Data Analysis Project
 
-## 🎯 Objective
-The goal of this project is to analyze **[briefly describe dataset, e.g., sales / customer / HR data]**
-to identify key trends and insights and present them using an interactive dashboard.
+## Objective
+Utilizing the Fitbit Fitness Tracker Data, identify some trends in smart device usage, how these trends can be applied to Bellabeat’s customers and how they can help influence Bellabeat’s marketing strategy.
 
-## 📂 Dataset
-- Source: Kaggle – **[paste dataset link]**
-- Raw data file: `data/raw_dataset.csv`
-- Cleaned data file: `data/cleaned_dataset.xlsx`
+## Dataset
+- Source: Kaggle – **https://www.kaggle.com/datasets/arashnic/fitbit**
 
-## 🔄 Workflow
+## Workflow
 1. Data cleaning using **Excel**
 2. Data analysis using **SQL in Google BigQuery**
 3. Data validation using **R**
 4. Data visualization using **Tableau**
 
-## 🧹 Data Cleaning (Excel)
+## Data Cleaning (Excel)
 Performed the following steps:
 - Removed duplicate records
 - Handled missing values
 - Standardized date and categorical formats
 - Verified column data types
 
-Cleaned dataset: `data/cleaned_dataset.xlsx`
-
-## 🧮 SQL Analysis (BigQuery)
-SQL queries were executed in Google BigQuery to calculate KPIs and analyze trends.
-
-Analysis included:
-- Aggregations and grouping
-- Category-wise and time-based trends
-- Key performance indicators
+## SQL Analysis (BigQuery)
+SQL queries were executed in Google BigQuery to analyze trends.
 
 SQL scripts available in `sql/` folder:
 - `bigquery_sales_analysis.sql`
 - `kpi_calculations.sql`
 
-## ✅ Data Validation (R)
+## Data Validation (R)
 Validation was performed to ensure data quality after transformation.
 
 Checks included:
@@ -44,9 +34,8 @@ Checks included:
 - Summary statistics verification
 - Outlier detection
 
-R script: `r_validation/validation_checks.R`
 
-## 📊 Visualization (Tableau)
+## Visualization (Tableau)
 An interactive dashboard was created to visualize key insights such as:
 - KPI summary
 - Trend analysis
