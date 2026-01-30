@@ -20,7 +20,7 @@ Performed the following steps:
 - Verified column data types
 
 ## SQL Analysis (BigQuery)
-### First I categorized people based on count of tracker utilizaton throuout the data period(04-12-2016 to 05-12-2016).
+First I categorized people based on count of tracker utilizaton throuout the data period(04-12-2016 to 05-12-2016).
 ```SQL
 SELECT
   ID AS PEOPLE,
