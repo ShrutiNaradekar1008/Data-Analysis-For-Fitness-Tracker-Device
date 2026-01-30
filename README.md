@@ -33,7 +33,7 @@ SELECT
 FROM 
   `bellabeat-project-108.Final_Dataset.dailyactivity_merged`
 GROUP BY ID
-ORDER BY COUNT_OF_UTILIZATION DESC
+ORDER BY COUNT_OF_UTILIZATION DESC;
 
 ### Analyzed the pattern of time spent by users
 ```SQL
@@ -55,7 +55,34 @@ SELECT
  
  FROM 
  `bellabeat-project-108.Final_Dataset.weekdays_activity` 
- GROUP BY Weekday
+ GROUP BY Weekday;
+
+### Steps pattern per hour
+```SQL
+
+SELECT 
+  time as Hour,
+  SUM(STEPTOTAL) AS Total_Steps
+FROM 
+  `bellabeat-project-108.Final_Dataset.hourlySteps_merged`
+GROUP BY Hour;
+
+### Effect of sleep pattern on total number of steps
+```SQL
+SELECT 
+  A.ID,
+  AVG(A.TotalSteps) AS AVERAGE_STEPS,
+  AVG(A.Calories) AS AVERAGE_CALORIES,
+  AVG(B.TotalMinutesAsleep) AS AVERAGE_SLEEP_TIME
+FROM 
+  `bellabeat-project-108.Final_Dataset.weekdays_activity` A
+INNER JOIN 
+   `bellabeat-project-108.Final_Dataset.sleepDay_merged` B
+ON
+  A.ID = B.ID
+GROUP BY ID
+;
+
 
 
 ## Visualization (Tableau)
