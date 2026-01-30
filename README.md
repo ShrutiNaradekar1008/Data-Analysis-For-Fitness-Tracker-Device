@@ -47,6 +47,15 @@ SELECT
  `bellabeat-project-108.Final_Dataset.weekdays_activity` 
  GROUP BY DAY
 
+### Analyzed the pattern of walking over the period of 1 week.
+```SQL
+SELECT 
+  DAY AS Weekday,
+  ROUND(AVG(TotalSteps),2) AS Average_Steps,
+ 
+ FROM 
+ `bellabeat-project-108.Final_Dataset.weekdays_activity` 
+ GROUP BY Weekday
 
 
 ## Visualization (Tableau)
