@@ -34,6 +34,7 @@ FROM
   `bellabeat-project-108.Final_Dataset.dailyactivity_merged`
 GROUP BY ID
 ORDER BY COUNT_OF_UTILIZATION DESC;
+**Tablueau/Type_of_users.png**
 
 ### Analyzed the pattern of time spent by users
 ```SQL
