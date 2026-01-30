@@ -20,7 +20,7 @@ Performed the following steps:
 - Verified column data types
 
 ## SQL Analysis (BigQuery)
-First I categorized people based on count of tracker utilizaton throuout the data period(04-12-2016 to 05-12-2016).
+### First I categorized people based on count of tracker utilizaton throuout the data period(04-12-2016 to 05-12-2016).
 ```SQL
 SELECT
   ID AS PEOPLE,
@@ -35,7 +35,19 @@ FROM
 GROUP BY ID
 ORDER BY COUNT_OF_UTILIZATION DESC
 
-![Type_of_users](Tablueau/Type_of_users.png)
+### Analyzed the pattern of time spent by users
+```SQL
+SELECT 
+  DAY,
+  AVG(VERYACTIVEMINUTES) AS AVG_OF_VERYACTIVEMINUTES,
+  AVG(FAIRLYACTIVEMINUTES) AS AVG_OF_FAILYACTIVEMINUTES,
+  AVG(LIGHTLYACTIVEMINUTES) AS AVG_OF_LIGHTLYACTIVEMINUTES,
+  AVG(SEDENTARYMINUTES) AS AVG_OF_SEDENTARYMINUTES
+ FROM 
+ `bellabeat-project-108.Final_Dataset.weekdays_activity` 
+ GROUP BY DAY
+
+
 
 ## Visualization (Tableau)
 
