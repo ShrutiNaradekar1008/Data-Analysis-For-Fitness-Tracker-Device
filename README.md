@@ -20,26 +20,25 @@ Performed the following steps:
 - Verified column data types
 
 ## SQL Analysis (BigQuery)
-SQL queries were executed in Google BigQuery to analyze trends.
+First I categorized people based on count of tracker utilizaton throuout the data period(04-12-2016 to 05-12-2016).
+```SQL
+SELECT
+  ID AS PEOPLE,
+  COUNT(ID) AS COUNT_OF_UTILIZATION,
+  CASE
+  WHEN COUNT(ID) BETWEEN 25 AND 31 THEN 'ACTIVE_USER'
+  WHEN COUNT(ID) BETWEEN 15 AND 24 THEN 'MODERATE_USERS'
+  ELSE 'LIGHT_USERS'
+  END AS TYPE_OF_USER
+FROM 
+  `bellabeat-project-108.Final_Dataset.dailyactivity_merged`
+GROUP BY ID
+ORDER BY COUNT_OF_UTILIZATION DESC
 
-SQL scripts available in `sql/` folder:
-- `bigquery_sales_analysis.sql`
-- `kpi_calculations.sql`
-
-## Data Validation (R)
-Validation was performed to ensure data quality after transformation.
-
-Checks included:
-- Row count comparison
-- Summary statistics verification
-- Outlier detection
-
+![Type_of_users](images/signup_chart.png)
 
 ## Visualization (Tableau)
-An interactive dashboard was created to visualize key insights such as:
-- KPI summary
-- Trend analysis
-- Category or segment comparisons
+
 
 Dashboard screenshots are available in `tableau/` folder.  
 Tableau Public Link: **[paste your Tableau link here]**
