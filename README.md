@@ -35,7 +35,7 @@ FROM
 GROUP BY ID
 ORDER BY COUNT_OF_UTILIZATION DESC
 
-![Type_of_users](images/signup_chart.png)
+![Type_of_users](Tablueau/Sheet 1 (10).png)
 
 ## Visualization (Tableau)
 
